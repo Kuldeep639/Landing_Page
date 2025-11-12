@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SK | Your Health, Our Priority</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+        --dark: #212529;
+        --light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: var(--light);
+        padding-top: 56px;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      }
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-color) !important;
+        font-size: 1.5rem;
+      }
+
+      #hero-section {
+        background: url("https://picsum.photos/1600/900?random=hospital")
+          no-repeat center center/cover;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: white;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      #hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .hero-content {
+        z-index: 10;
+      }
+      .hero-heading {
+        font-size: 3.5rem;
+        font-weight: 700;
+        @media (max-width: 576px) {
+          font-size: 2.5rem;
+        }
+      }
+      .btn-hero {
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .service-card {
+        text-align: center;
+        padding: 30px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border: none;
+        transition: transform 0.3s;
+        height: 100%;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+      .service-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 40px 0 20px 0;
+      }
+      .footer-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .footer-link:hover {
+        color: white;
+      }
+      .social-icon {
+        color: white;
+        font-size: 1.5rem;
+        margin-right: 15px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+      .social-icon:hover {
+        opacity: 1;
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+        id="mainNav"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#home-section">⚕️ SK</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active smooth-scroll"
+                  aria-current="page"
+                  href="#home-section"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#services-section"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#about-section"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#gallery-section"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link smooth-scroll" href="#contact-section"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home-section" class="p-0">
+        <div id="hero-section">
+          <div class="container hero-content text-center">
+            <h1 class="hero-heading">Your Health, Our Priority</h1>
+            <p class="lead hero-subheading">
+              Compassionate care and cutting-edge medical technology.
+            </p>
+            <a
+              href="#about-section"
+              class="btn btn-primary btn-hero text-white smooth-scroll"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="about-section" class="bg-white">
+        <div class="container">
+          <h2 class="text-center text-primary mb-5">Committed to Wellness</h2>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <p class="lead">
+                SK has been dedicated to serving the community with excellence
+                since 1998.
+              </p>
+              <p>
+                Our mission is to provide comprehensive, patient-centered care.
+                We believe in preventative medicine and treating every patient
+                with dignity and respect. Our hospital is equipped with the
+                latest diagnostic tools and staffed by certified specialists.
+              </p>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+              <img
+                src="https://picsum.photos/500/300?random=doctors"
+                alt="Team of Doctors"
+                class="img-fluid rounded shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services-section">
+        <div class="container">
+          <h2 class="text-center mb-5 text-primary">
+            Our Key Medical Services
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <div class="card service-card">
+                <div class="service-icon">
+                  <i class="fas fa-notes-medical"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">General Checkup</h5>
+                  <p class="card-text text-muted">
+                    Routine physical exams and preventative screenings.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card service-card">
+                <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+                <div class="card-body">
+                  <h5 class="card-title">Emergency Care</h5>
+                  <p class="card-text text-muted">
+                    24/7 immediate medical attention and trauma services.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card service-card">
+                <div class="service-icon">
+                  <i class="fas fa-procedures"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Advanced Surgery</h5>
+                  <p class="card-text text-muted">
+                    Specialized and minimally invasive surgical procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card service-card">
+                <div class="service-icon"><i class="fas fa-x-ray"></i></div>
+                <div class="card-body">
+                  <h5 class="card-title">Radiology & Labs</h5>
+                  <p class="card-text text-muted">
+                    Fast and accurate diagnostic imaging and lab testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery-section" class="bg-light">
+        <div class="container">
+          <h2 class="text-center mb-5 text-primary">
+            A Look Inside Our Facility
+          </h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img
+                src="https://picsum.photos/400/300?random=room"
+                alt="Patient Room"
+                class="img-fluid rounded shadow-sm"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="https://picsum.photos/400/300?random=reception"
+                alt="Reception Area"
+                class="img-fluid rounded shadow-sm"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="https://picsum.photos/400/300?random=equipment"
+                alt="Medical Equipment"
+                class="img-fluid rounded shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-section" class="bg-white">
+        <div class="container">
+          <h2 class="text-center mb-5 text-primary">Book Your Appointment</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-7">
+              <form id="appointmentForm" class="p-4 border rounded shadow">
+                <div
+                  id="form-message"
+                  class="mt-3 text-center"
+                  style="display: none"
+                ></div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label"
+                      >Name <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your full name.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label"
+                      >Phone (10 Digits)
+                      <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      maxlength="10"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Phone number must be exactly 10 digits.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label"
+                      >Email <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="date" class="form-label"
+                      >Preferred Appointment Date
+                      <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please select a preferred date.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="3"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">
+                      Request Appointment
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="text-white mb-3">SK</h5>
+            <p class="text-white-50">
+              <i class="fas fa-map-marker-alt me-2"></i> WWWW XXXX BBB
+            </p>
+            <p class="text-white-50">
+              <i class="fas fa-phone me-2"></i> (91)1203456789
+            </p>
+            <p class="text-white-50">
+              <i class="fas fa-envelope me-2"></i> info@skhealth.com
+            </p>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="text-white mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#home-section" class="footer-link smooth-scroll"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#services-section" class="footer-link smooth-scroll"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#about-section" class="footer-link smooth-scroll"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact-section" class="footer-link smooth-scroll"
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="text-white mb-3">Connect With Us</h5>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".smooth-scroll, .nav-link").on("click", function (e) {
+          if (this.hash !== "") {
+            e.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - 70,
+              },
+              800
+            );
+          }
+        });
+
+        $("#phone").on("input", function () {
+          var $this = $(this);
+          var filteredValue = $this.val().replace(/[^0-9]/g, "");
+
+          if (filteredValue.length > 10) {
+            filteredValue = filteredValue.substring(0, 10);
+          }
+
+          $this.val(filteredValue);
+        });
+
+        $("#appointmentForm").on("submit", function (e) {
+          e.preventDefault();
+          var form = $(this);
+          var valid = true;
+          var formMessage = $("#form-message");
+
+          form.find(".form-control").removeClass("is-invalid");
+          formMessage.hide().removeClass("alert-success alert-danger");
+
+          form.find("input[required]").each(function () {
+            var input = $(this);
+            var value = input.val().trim();
+            var isValid = true;
+            var feedback = "This field is required.";
+
+            if (value === "") {
+              isValid = false;
+            } else if (input.is("#email")) {
+              var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(value)) {
+                isValid = false;
+                feedback = "Please enter a valid email address.";
+              }
+            } else if (input.is("#phone")) {
+              if (value.length !== 10) {
+                isValid = false;
+                feedback = "Phone number must be exactly 10 digits.";
+              }
+            }
+
+            if (!isValid) {
+              input.addClass("is-invalid");
+              input.next(".invalid-feedback").text(feedback);
+              valid = false;
+            }
+          });
+
+          if (valid) {
+            form
+              .find('input, textarea, button[type="submit"]')
+              .prop("disabled", true);
+
+            formMessage
+              .html(
+                `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i>Appointment request sent! We will confirm by email.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`
+              )
+              .show();
+
+            form.trigger("reset"); 
+
+            setTimeout(function () {
+              form
+                .find('input, textarea, button[type="submit"]')
+                .prop("disabled", false);
+            }, 3000);
+          } else {
+            formMessage
+              .html(
+                '<i class="fas fa-exclamation-triangle me-2"></i>Please correct the highlighted fields and try again.'
+              )
+              .addClass("alert alert-danger")
+              .show();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
